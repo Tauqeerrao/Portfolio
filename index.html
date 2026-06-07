@@ -24,9 +24,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:var(--bg3);border:1px solid var(--border);padding:0.4rem 1rem;border-radius:50px;font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2rem}
 .hero-tag span{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:"Syne",sans-serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.5rem}
+h1{font-family:"Syne",sans-serif;font-size:clamp(2rem,8vw,5.5rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.5rem}
 h1 .line2{color:var(--accent)}
-.hero-sub{font-size:1.05rem;color:var(--muted);max-width:520px;margin-bottom:2.5rem;line-height:1.7}
+.hero-sub{font-size:1.15rem;color:#ccc;max-width:480px;margin-bottom:2.5rem;line-height:1.6;font-weight:500;letter-spacing:-0.01em}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
 .btn-main{background:var(--accent);color:#080808;padding:0.85rem 2rem;border-radius:50px;font-weight:700;text-decoration:none;font-family:"Syne",sans-serif;font-size:0.9rem;transition:transform 0.2s,background 0.2s}
 .btn-main:hover{background:var(--accent2);transform:translateY(-2px)}
@@ -73,9 +73,16 @@ footer{padding:1.5rem 4%;border-top:1px solid var(--border);display:flex;justify
 @media(max-width:768px){
   .nav-links{display:none}
   .project-inner{grid-template-columns:1fr}
-  .screenshots img{height:180px}
-  .project-info{padding:1.5rem}
-  .stats{gap:2rem}
+  .screenshots img{height:160px}
+  .project-info{padding:1.25rem}
+  .stats{gap:1.5rem}
+  .stat-num{font-size:1.5rem}
+  h1{font-size:clamp(1.8rem,9vw,3rem)}
+  .hero{padding:6rem 5% 3rem}
+  .hero-sub{font-size:0.95rem;line-height:1.5}
+  .sec-title{font-size:1.6rem}
+  .project-name{font-size:1.2rem}
+  section{padding:3rem 5%}
 }
 </style>
 </head>
@@ -88,16 +95,16 @@ footer{padding:1.5rem 4%;border-top:1px solid var(--border);display:flex;justify
     <a href="#services">Services</a>
     <a href="#stack">Stack</a>
   </div>
-  <a href="https://wa.me/923034173569" class="nav-cta" target="_blank">Hire Me &#8594;</a>
+  <a href="https://wa.me/923xxxxxxxxx" class="nav-cta" target="_blank">Hire Me &#8594;</a>
 </nav>
 
 <section class="hero">
   <div class="hero-tag"><span></span>Available for new projects</div>
   <h1>Shopify Dev<br><span class="line2">+ Meta Ads</span><br>Specialist</h1>
-  <p class="hero-sub">I build high-converting Shopify stores with custom code and run Meta Ads campaigns that scale &#8212; powered by AI. Based in Lahore, serving brands across Pakistan &amp; UAE.</p>
+  <p class="hero-sub">Custom Shopify stores + Meta Ads that convert.<br>Based in Lahore &mdash; serving Pakistan &amp; UAE.</p>
   <div class="hero-btns">
     <a href="#projects" class="btn-main">View My Work</a>
-    <a href="https://wa.me/923034173569" class="btn-ghost" target="_blank">WhatsApp Me</a>
+    <a href="https://wa.me/923xxxxxxxxx" class="btn-ghost" target="_blank">WhatsApp Me</a>
   </div>
   <div class="stats">
     <div class="stat-item"><div class="stat-num">8.6x</div><div class="stat-label">ROAS achieved</div></div>
@@ -265,12 +272,18 @@ footer{padding:1.5rem 4%;border-top:1px solid var(--border);display:flex;justify
   <div class="stack-grid">
     <span class="stack-pill">Shopify Liquid</span>
     <span class="stack-pill">JavaScript</span>
+    <span class="stack-pill">Node.js</span>
+    <span class="stack-pill">GraphQL API</span>
+    <span class="stack-pill">Swiper.js</span>
     <span class="stack-pill">model-viewer</span>
     <span class="stack-pill">Meta Ads Manager</span>
     <span class="stack-pill">Meta Pixel + CAPI</span>
     <span class="stack-pill">ABO / CBO Strategy</span>
     <span class="stack-pill">Claude AI</span>
     <span class="stack-pill">ChatGPT</span>
+    <span class="stack-pill">D-ID AI Video</span>
+    <span class="stack-pill">ElevenLabs</span>
+    <span class="stack-pill">CapCut</span>
     <span class="stack-pill">HTML / CSS</span>
     <span class="stack-pill">Canva</span>
   </div>
@@ -280,8 +293,8 @@ footer{padding:1.5rem 4%;border-top:1px solid var(--border);display:flex;justify
   <h2>Let&#39;s Build<br>Something Great</h2>
   <p>Need a Shopify store built right, or Meta Ads that actually convert? Free 30-min strategy call &#8212; let&#39;s talk.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/923034173569" class="btn-main" target="_blank">WhatsApp Me &#8594;</a>
-    <a href="mailto:tauqueerrao@gmail.com" class="btn-ghost">Send Email</a>
+    <a href="https://wa.me/923xxxxxxxxx" class="btn-main" target="_blank">WhatsApp Me &#8594;</a>
+    <a href="mailto:your@email.com" class="btn-ghost">Send Email</a>
   </div>
 </section>
 
