@@ -631,111 +631,22 @@ footer{padding:1.5rem 5%;border-top:1px solid var(--border);display:flex;justify
 </footer>
 
 <script>
-// Intersection Observer for fade-up
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll(".fade-up").forEach(el => obs.observe(el));
-
-
-// ===============================
-// PORTFOLIO IMAGES LOADER
-// ===============================
-
 const projectImages = [
-  [
-    "./bloomart-1.jpg",
-    "./bloomart-2.png"
-  ],
-  [
-    "./NS-1.jpg",
-    "./NS-2.jpg"
-  ],
-  [
-    "./PW-1.jpg",
-    "./PW-2.jpg"
-  ],
-  [
-    "./sasti-1.jpg",
-    "./sasti-2.jpg"
-  ],
-  [
-    "./elegant-1.jpg",
-    "./elegant-2.jpg"
-  ]
+  ["./bloomart-1.jpg", "./bloomart-2.png"],
+  ["./NS-1.jpg", "./NS-2.jpg"],
+  ["./PW-1.jpg", "./PW-2.jpg"],
+  ["./sasti-1.jpg", "./sasti-2.jpg"],
+  ["./elegant-1.jpg", "./elegant-2.jpg"]
 ];
 
 document.querySelectorAll(".proj-row").forEach((row, rowIndex) => {
 
-  const placeholders = row.querySelectorAll(".screen-ph");
+  const screens = row.querySelector(".proj-screens");
 
-  placeholders.forEach((placeholder, imgIndex) => {
-
-    const img = document.createElement("img");
-
-    img.src = projectImages[rowIndex][imgIndex];
-    img.className = "screen portfolio-thumb";
-    img.loading = "lazy";
-
-    img.onload = () => {
-      placeholder.replaceWith(img);
-    };
-
-    img.onerror = () => {
-      console.error("FAILED:", img.src);
-
-      placeholder.innerHTML = `
-        <div style="
-          color:#ff6b6b;
-          font-size:12px;
-          text-align:center;
-          padding:20px;
-        ">
-          Image Missing<br>
-          ${img.src}
-        </div>
-      `;
-    };
-
-  });
-
-});
-
-
-// ===============================
-// IMAGE POPUP
-// ===============================
-
-document.addEventListener("click", (e) => {
-
-  if (e.target.classList.contains("portfolio-thumb")) {
-
-    document.getElementById("imgModal").style.display = "flex";
-
-    document.getElementById("modalImg").src =
-      e.target.src;
-
-  }
-
-});
-
-document.addEventListener("click", (e) => {
-
-  if (
-    e.target.classList.contains("close-modal") ||
-    e.target.id === "imgModal"
-  ) {
-
-    document.getElementById("imgModal").style.display =
-      "none";
-
-  }
+  screens.innerHTML = `
+    <img src="${projectImages[rowIndex][0]}" class="screen portfolio-thumb" alt="">
+    <img src="${projectImages[rowIndex][1]}" class="screen portfolio-thumb" alt="">
+  `;
 
 });
 </script>
